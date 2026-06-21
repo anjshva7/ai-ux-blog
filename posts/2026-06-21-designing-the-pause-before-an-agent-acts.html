@@ -43,6 +43,9 @@
     .footer-copy{font-size:13px;color:var(--ink);opacity:0.45;}
     .footer-links{display:flex;gap:20px;}
     .footer-links a{font-size:13px;color:var(--ink);opacity:0.55;}
+    .article-hero{margin:0 0 14px;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+    .article-hero svg{display:block;width:100%;height:auto;}
+    .article-figcap{font-size:12.5px;color:var(--body-muted);font-style:italic;text-align:center;margin:0 0 44px;}
     @media(max-width:680px){:root{--page-pad:24px;}.article-wrap{padding:48px 20px 80px;}}
   </style>
 </head>
@@ -61,6 +64,45 @@
     <p class="article-lede">Agentic products quietly moved the hard design problem from how the AI answers to how much it does before you look. The new craft is designing the pause.</p>
   </header>
   <div class="article-wrap">
+    <figure class="article-hero">
+      <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A queue of completed agent actions on the left, held at a glowing pause gate, with ghosted upcoming actions waiting on the right.">
+        <rect width="680" height="300" fill="#0E0C09"/>
+        <!-- track -->
+        <line x1="56" y1="170" x2="624" y2="170" stroke="rgba(237,234,229,0.16)" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/>
+        <!-- completed actions (left) -->
+        <g fill="#B4F03C">
+          <circle cx="84" cy="170" r="9"/>
+          <circle cx="126" cy="170" r="9"/>
+          <circle cx="168" cy="170" r="9"/>
+          <circle cx="210" cy="170" r="9"/>
+        </g>
+        <!-- traveling dot that stops before the gate -->
+        <circle cy="170" r="7" fill="#EDEAE5">
+          <animate attributeName="cx" values="84;284;284;84" keyTimes="0;0.5;0.74;1" dur="4.4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.08;0.74;0.8;1" dur="4.4s" repeatCount="indefinite"/>
+        </circle>
+        <!-- pause gate (held) -->
+        <circle cx="340" cy="170" r="46" fill="none" stroke="#B4F03C" stroke-width="2.5">
+          <animate attributeName="r" values="46;62;46" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.55;0;0.55" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="340" cy="170" r="44" fill="rgba(180,240,60,0.07)" stroke="#B4F03C" stroke-width="3"/>
+        <rect x="327" y="152" width="7" height="36" rx="3.5" fill="#B4F03C"/>
+        <rect x="346" y="152" width="7" height="36" rx="3.5" fill="#B4F03C"/>
+        <!-- upcoming actions (ghosted, about to happen) -->
+        <g fill="none" stroke="rgba(237,234,229,0.32)" stroke-width="2" stroke-dasharray="3 4">
+          <circle cx="468" cy="170" r="9"/>
+          <circle cx="510" cy="170" r="9"/>
+          <circle cx="552" cy="170" r="9"/>
+          <circle cx="594" cy="170" r="9"/>
+        </g>
+        <!-- labels -->
+        <text x="56" y="232" fill="rgba(237,234,229,0.42)" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="1.4">DONE</text>
+        <text x="340" y="258" fill="#B4F03C" font-family="Inter,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" text-anchor="middle">HOLD &amp; CONFIRM</text>
+        <text x="624" y="232" fill="rgba(237,234,229,0.42)" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" text-anchor="end">ABOUT TO HAPPEN</text>
+      </svg>
+    </figure>
+    <p class="article-figcap">The most important screen is the one that shows what's <em>about</em> to happen — not what already did.</p>
     <div class="author-strip">
       <div class="author-avatar">AS</div>
       <div class="author-info">
