@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Pause Before an Agent Acts — Anjali Srivastava</title>
+  <meta name="description" content="Agentic products moved the hard design problem from how the AI answers to how much it does before you look. The new craft is designing the pause.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--lime:#B4F03C;--ink:#0E0C09;--cream:#EDEAE5;--body-text:#1A1714;--body-muted:#7A746A;--body-faint:#B0A99E;--border:rgba(14,12,9,0.10);--serif:'DM Serif Display',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--page-pad:72px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--cream);font-family:var(--sans);color:var(--body-text);}
+    a{color:inherit;text-decoration:none;}
+    nav{background:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:18px var(--page-pad);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;}
+    .nav-logo{font-family:var(--serif);font-size:18px;color:var(--ink);}
+    .nav-links a{font-size:13px;font-weight:500;color:var(--body-muted);}
+    header.article-header{background:var(--lime);padding:64px var(--page-pad) 56px;}
+    .article-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+    .article-tag{font-size:11px;font-weight:700;letter-spacing:0.1em;background:rgba(14,12,9,0.10);color:var(--ink);padding:4px 10px;border-radius:20px;text-transform:uppercase;}
+    .article-date,.read-time{font-size:13px;color:var(--ink);opacity:0.55;}
+    .article-title{font-family:var(--serif);font-size:clamp(36px,5.5vw,68px);font-weight:400;line-height:1.05;letter-spacing:-0.025em;color:var(--ink);margin-bottom:20px;}
+    .article-lede{font-size:19px;line-height:1.6;color:var(--ink);opacity:0.68;max-width:640px;}
+    .article-wrap{padding:64px 40px 100px;max-width:680px;margin:0 auto;}
+    .author-strip{display:flex;align-items:center;gap:14px;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border);}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--lime);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;}
+    .author-name{font-size:14px;font-weight:600;}
+    .author-role{font-size:12px;color:var(--body-faint);}
+    .prose p{font-size:18px;line-height:1.78;margin-bottom:28px;}
+    .prose p:first-child::first-letter{font-family:var(--serif);font-size:4.5em;line-height:0.8;float:left;margin-right:8px;margin-top:6px;}
+    .prose hr{border:none;border-top:1px solid var(--border);margin:44px 0;}
+    .prose .section-head{font-family:var(--serif);font-size:24px;font-style:italic;margin-bottom:20px;margin-top:44px;}
+    .pull-quote{border-left:3px solid var(--lime);padding:4px 0 4px 24px;margin:40px 0;}
+    .pull-quote p{font-family:var(--serif);font-style:italic;font-size:22px!important;line-height:1.5!important;margin:0!important;}
+    .closing-line{font-size:16px;font-weight:600;margin-top:8px;}
+    footer{background:var(--lime);padding:64px var(--page-pad) 40px;}
+    .footer-heading{font-family:var(--serif);font-size:clamp(32px,4.5vw,52px);font-weight:400;line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:12px;}
+    .footer-sub{font-size:15px;color:var(--ink);opacity:0.55;line-height:1.65;margin-bottom:28px;}
+    .footer-form{display:flex;gap:8px;max-width:440px;}
+    .footer-email{flex:1;background:rgba(14,12,9,0.07);border:1px solid rgba(14,12,9,0.18);border-radius:6px;padding:13px 16px;font-size:14px;font-family:var(--sans);color:var(--ink);outline:none;}
+    .footer-btn{background:var(--ink);color:var(--lime);border:none;border-radius:6px;padding:13px 22px;font-size:14px;font-weight:600;cursor:pointer;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:32px;border-top:1px solid rgba(14,12,9,0.15);gap:12px;}
+    .footer-copy{font-size:13px;color:var(--ink);opacity:0.45;}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{font-size:13px;color:var(--ink);opacity:0.55;}
+    @media(max-width:680px){:root{--page-pad:24px;}.article-wrap{padding:48px 20px 80px;}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="../index.html">Anjali Srivastava</a>
+    <div class="nav-links"><a href="../index.html">← All writing</a></div>
+  </nav>
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-tag">AI Product</span>
+      <span class="article-date">Jun 21, 2026</span>
+      <span class="read-time">· 4 min read</span>
+    </div>
+    <h1 class="article-title">The Pause Before an Agent Acts</h1>
+    <p class="article-lede">Agentic products quietly moved the hard design problem from how the AI answers to how much it does before you look. The new craft is designing the pause.</p>
+  </header>
+  <div class="article-wrap">
+    <div class="author-strip">
+      <div class="author-avatar">AS</div>
+      <div class="author-info">
+        <span class="author-name">Anjali Srivastava</span>
+        <span class="author-role">AI Builder · AI Products</span>
+      </div>
+    </div>
+    <div class="prose">
+      <p>You ask the agent to tidy up your week. A few seconds pass, and it reports back, cheerful and finished: twelve meetings moved, three declined, one canceled. And instead of relief, you feel a small lurch. Which three did it decline? Was the call with the new client one of them? You start scrolling back through your calendar, hunting for an undo, and you realize the thing you actually wanted was never to hand over the keys. It was to be asked.</p>
+
+      <p>This is the quiet tension running through every agentic product shipping right now. For two years the hard design question was about answers — how the model responds, how it phrases things, how it admits when it does not know. That problem hasn't gone away, but it has been overtaken by a stranger one. The newest interfaces don't just answer. They act. They book, cancel, send, refund, refactor, and reorganize, often several steps deep, often before you've finished reading the first line of what they intend to do.</p>
+
+      <p>A recent stream of research on human–agent interaction keeps circling the same word: calibration. People don't want maximum autonomy or zero autonomy. They want the right amount, at the right moment, and they want to be able to feel where that line is. The studies frame it as trust calibration, but on the design side it shows up as something far more concrete. It is the question of what happens in the half-second between a user's instruction and the agent's first irreversible move.</p>
+
+      <p class="section-head">Most of the work is in the gap</p>
+
+      <p>We tend to design the two ends of that interaction beautifully. The input — a clean prompt box, a friendly placeholder. The output — a tidy summary of everything that got done. What we under-design is the gap between them, which is precisely where all the anxiety lives. An assistant that suggests gives you the gap for free; nothing happens until you click. An agent that acts collapses the gap to nothing unless you deliberately build it back in.</p>
+
+      <p>The best agentic interfaces I've used lately do exactly that. They re-introduce a pause, but a generous one, not a nagging one. Before the agent touches anything, it shows you the plan in plain language: here are the twelve meetings I'll move, here are the three I'll decline and why. Not a permissions dialog you reflexively dismiss, but a preview you can actually read and edit. The agent has already done the thinking. It just hasn't pulled the trigger.</p>
+
+      <div class="pull-quote"><p>The most important screen in an agentic product is often the one that shows what is about to happen, not the one that confirms what already did.</p></div>
+
+      <p class="section-head">Reversibility is a design material</p>
+
+      <p>The pause shouldn't be uniform, though, and that's where the craft comes in. Moving a meeting and emailing a client are not the same risk, so they shouldn't carry the same friction. Good agentic UX grades its autonomy: low-stakes, reversible actions flow through silently, while anything that leaves the building — a message to a real person, a payment, a deletion — surfaces the pause. The design skill is no longer just writing copy or arranging components. It is mapping the consequence of every action the agent can take, and deciding, action by action, how much room a human needs before it happens.</p>
+
+      <p>Reversibility becomes a design material in its own right. When undo is genuinely cheap, you can let the agent run and trust people to correct it. When undo is impossible — you cannot un-send a message someone has already read — the interface has to slow down and make the user the author of that moment, not a spectator to it. Treating every action as equally urgent or equally trivial is the fastest way to make a capable agent feel reckless.</p>
+
+      <p>What's striking is how much of this is old interaction design wearing new clothes. Visibility of system status, user control, the freedom to back out — these were heuristics decades before anyone said "agent." The difference is that we used to apply them to a button that did one small thing. Now we're applying them to a collaborator that can do twenty things in a row while we look away.</p>
+
+      <p>So the question worth sitting with isn't whether to let agents act on our behalf. They already do, and they'll do more. It's whether we design the moment before action as carefully as we've learned to design the action itself — because in a world where software can finally do things without us, the most valuable thing an interface can offer might simply be a good place to say "wait."</p>
+
+      <p class="closing-line">The next great interface won't be the one that acts fastest. It'll be the one that knows exactly when to pause.</p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-cta">
+      <h2 class="footer-heading">Enjoyed this essay?</h2>
+      <p class="footer-sub">Get new writing on AI, UX, and what happens at their edge.<br>No noise. Unsubscribe any time.</p>
+      <form class="footer-form" onsubmit="return false;">
+        <input class="footer-email" type="email" placeholder="your@email.com" autocomplete="email">
+        <button class="footer-btn" type="submit">Subscribe →</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Anjali Srivastava</span>
+      <div class="footer-links">
+        <a href="../index.html">← All writing</a>
+        <a href="https://www.linkedin.com/in/anjaliuiux/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
