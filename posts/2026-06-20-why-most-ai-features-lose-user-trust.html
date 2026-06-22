@@ -311,6 +311,10 @@
     }
     .footer-links a:hover { opacity: 1; }
 
+    .article-hero { margin: 0 0 14px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .article-hero svg { display: block; width: 100%; height: auto; }
+    .article-figcap { font-size: 12.5px; color: var(--body-muted); font-style: italic; text-align: center; margin: 0 0 44px; }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 600px) {
       :root { --page-pad: 24px; }
@@ -338,6 +342,26 @@
   </header>
 
   <div class="article-wrap">
+
+    <figure class="article-hero">
+      <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A trust signal beats strongly, weakens across three diminishing pulses, then flatlines.">
+        <rect width="680" height="300" fill="#0E0C09"/>
+        <line x1="56" y1="170" x2="624" y2="170" stroke="rgba(237,234,229,0.14)" stroke-width="1.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+        <path d="M356 170 L624 170" fill="none" stroke="rgba(237,234,229,0.30)" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"/>
+        <path d="M56 170 L86 170 L101 118 L116 214 L146 170 L176 170 L191 134 L206 202 L236 170 L266 170 L281 150 L296 190 L326 170 L356 170" fill="none" stroke="#B4F03C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle r="6" fill="#EDEAE5">
+          <animateMotion dur="4.4s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.82;1" calcMode="linear" path="M56 170 L86 170 L101 118 L116 214 L146 170 L176 170 L191 134 L206 202 L236 170 L266 170 L281 150 L296 190 L326 170 L356 170 L624 170"/>
+          <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.82;0.9;1" dur="4.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="624" cy="170" r="4" fill="rgba(237,234,229,0.5)">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <text x="56" y="246" fill="#B4F03C" font-family="Inter,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">TRUST</text>
+        <text x="206" y="246" fill="rgba(237,234,229,0.42)" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" text-anchor="middle">THREE PATTERNS</text>
+        <text x="624" y="246" fill="rgba(237,234,229,0.42)" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" text-anchor="end">FLATLINE</text>
+      </svg>
+    </figure>
+    <p class="article-figcap">Trust doesn't crash — it fades, one weakened beat at a time.</p>
 
     <div class="author-strip">
       <div class="author-avatar">AS</div>
