@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Generating a Screen Costs Nothing — Anjali Srivastava</title>
+  <meta name="description" content="72% of designers now use generative AI. When making a screen takes a sentence, the job quietly shifts from producing options to judging them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--lime:#B4F03C;--ink:#0E0C09;--cream:#EDEAE5;--body-text:#1A1714;--body-muted:#7A746A;--body-faint:#B0A99E;--border:rgba(14,12,9,0.10);--serif:'DM Serif Display',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--page-pad:72px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--cream);font-family:var(--sans);color:var(--body-text);}
+    a{color:inherit;text-decoration:none;}
+    nav{background:var(--lime);display:flex;align-items:center;justify-content:space-between;padding:18px var(--page-pad);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;}
+    .nav-logo{font-family:var(--serif);font-size:18px;color:var(--ink);}
+    .nav-links a{font-size:13px;font-weight:500;color:var(--body-muted);}
+    header.article-header{background:var(--lime);padding:64px var(--page-pad) 56px;}
+    .article-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+    .article-tag{font-size:11px;font-weight:700;letter-spacing:0.1em;background:rgba(14,12,9,0.10);color:var(--ink);padding:4px 10px;border-radius:20px;text-transform:uppercase;}
+    .article-date,.read-time{font-size:13px;color:var(--ink);opacity:0.55;}
+    .article-title{font-family:var(--serif);font-size:clamp(36px,5.5vw,68px);font-weight:400;line-height:1.05;letter-spacing:-0.025em;color:var(--ink);margin-bottom:20px;}
+    .article-lede{font-size:19px;line-height:1.6;color:var(--ink);opacity:0.68;max-width:640px;}
+    .article-wrap{padding:64px 40px 100px;max-width:680px;margin:0 auto;}
+    .author-strip{display:flex;align-items:center;gap:14px;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border);}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--lime);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;}
+    .author-name{font-size:14px;font-weight:600;}
+    .author-role{font-size:12px;color:var(--body-faint);}
+    .prose p{font-size:18px;line-height:1.78;margin-bottom:28px;}
+    .prose p:first-child::first-letter{font-family:var(--serif);font-size:4.5em;line-height:0.8;float:left;margin-right:8px;margin-top:6px;}
+    .prose hr{border:none;border-top:1px solid var(--border);margin:44px 0;}
+    .prose .section-head{font-family:var(--serif);font-size:24px;font-style:italic;margin-bottom:20px;margin-top:44px;}
+    .pull-quote{border-left:3px solid var(--lime);padding:4px 0 4px 24px;margin:40px 0;}
+    .pull-quote p{font-family:var(--serif);font-style:italic;font-size:22px!important;line-height:1.5!important;margin:0!important;}
+    .closing-line{font-size:16px;font-weight:600;margin-top:8px;}
+    .article-hero{margin:0 0 14px;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+    .article-hero svg{display:block;width:100%;height:auto;}
+    .article-figcap{font-size:12.5px;color:var(--body-muted);font-style:italic;text-align:center;margin:0 0 44px;}
+    footer{background:var(--lime);padding:64px var(--page-pad) 40px;}
+    .footer-heading{font-family:var(--serif);font-size:clamp(32px,4.5vw,52px);font-weight:400;line-height:1.08;letter-spacing:-0.025em;color:var(--ink);margin-bottom:12px;}
+    .footer-sub{font-size:15px;color:var(--ink);opacity:0.55;line-height:1.65;margin-bottom:28px;}
+    .footer-form{display:flex;gap:8px;max-width:440px;}
+    .footer-email{flex:1;background:rgba(14,12,9,0.07);border:1px solid rgba(14,12,9,0.18);border-radius:6px;padding:13px 16px;font-size:14px;font-family:var(--sans);color:var(--ink);outline:none;}
+    .footer-btn{background:var(--ink);color:var(--lime);border:none;border-radius:6px;padding:13px 22px;font-size:14px;font-weight:600;cursor:pointer;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:32px;border-top:1px solid rgba(14,12,9,0.15);gap:12px;}
+    .footer-copy{font-size:13px;color:var(--ink);opacity:0.45;}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{font-size:13px;color:var(--ink);opacity:0.55;}
+    @media(max-width:680px){:root{--page-pad:24px;}.article-wrap{padding:48px 20px 80px;}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="../index.html">Anjali Srivastava</a>
+    <div class="nav-links"><a href="../index.html">← All writing</a></div>
+  </nav>
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-tag">Design Tools</span>
+      <span class="article-date">Jun 22, 2026</span>
+      <span class="read-time">· 4 min read</span>
+    </div>
+    <h1 class="article-title">When Generating a Screen Costs Nothing</h1>
+    <p class="article-lede">Seventy-two percent of designers now reach for generative AI. When making a screen takes a sentence, the job quietly shifts from producing options to judging them.</p>
+  </header>
+  <div class="article-wrap">
+    <figure class="article-hero">
+      <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five generated interface options in a row; a selection ring scans across them and settles on one.">
+        <rect width="680" height="300" fill="#0E0C09"/>
+        <g fill="none" stroke="rgba(237,234,229,0.28)" stroke-width="1.5">
+          <rect x="70" y="74" width="90" height="132" rx="7"/>
+          <rect x="190" y="74" width="90" height="132" rx="7"/>
+          <rect x="430" y="74" width="90" height="132" rx="7"/>
+          <rect x="550" y="74" width="90" height="132" rx="7"/>
+        </g>
+        <g stroke="rgba(237,234,229,0.22)" stroke-width="4" stroke-linecap="round">
+          <line x1="82" y1="92" x2="120" y2="92"/><line x1="82" y1="112" x2="148" y2="112"/><line x1="82" y1="128" x2="134" y2="128"/>
+          <line x1="202" y1="92" x2="240" y2="92"/><line x1="202" y1="112" x2="268" y2="112"/><line x1="202" y1="128" x2="254" y2="128"/>
+          <line x1="442" y1="92" x2="480" y2="92"/><line x1="442" y1="112" x2="508" y2="112"/><line x1="442" y1="128" x2="494" y2="128"/>
+          <line x1="562" y1="92" x2="600" y2="92"/><line x1="562" y1="112" x2="628" y2="112"/><line x1="562" y1="128" x2="614" y2="128"/>
+        </g>
+        <rect x="310" y="74" width="90" height="132" rx="7" fill="rgba(180,240,60,0.10)" stroke="#B4F03C" stroke-width="2.5"/>
+        <g stroke="#B4F03C" stroke-width="4" stroke-linecap="round">
+          <line x1="322" y1="92" x2="360" y2="92"/><line x1="322" y1="112" x2="388" y2="112"/><line x1="322" y1="128" x2="374" y2="128"/>
+        </g>
+        <rect y="68" width="98" height="144" rx="9" fill="none" stroke="#EDEAE5" stroke-width="2">
+          <animate attributeName="x" values="66;186;306;426;546;306;306" keyTimes="0;0.16;0.32;0.48;0.64;0.82;1" dur="5.2s" calcMode="discrete" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.9;0.9;0.9;0.9;0.9;1;1" keyTimes="0;0.16;0.32;0.48;0.64;0.82;1" dur="5.2s" calcMode="discrete" repeatCount="indefinite"/>
+        </rect>
+        <text x="70" y="244" fill="rgba(237,234,229,0.42)" font-family="Inter,sans-serif" font-size="11" font-weight="600" letter-spacing="1.4">GENERATED ×5</text>
+        <text x="640" y="244" fill="#B4F03C" font-family="Inter,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" text-anchor="end">ONE IS RIGHT</text>
+      </svg>
+    </figure>
+    <p class="article-figcap">Generation is free. The judgment that picks one — and can say why — is not.</p>
+    <div class="author-strip">
+      <div class="author-avatar">AS</div>
+      <div class="author-info">
+        <span class="author-name">Anjali Srivastava</span>
+        <span class="author-role">AI Builder · AI Products</span>
+      </div>
+    </div>
+    <div class="prose">
+      <p>A designer I know typed one line into her canvas the other day — "a settings page for a meditation app, calm, generous white space" — and ten seconds later six full screens stared back at her, each one plausible, each one clickable. A year ago that was an afternoon of work. There was a flicker of delight, and then, underneath it, a quieter and stranger feeling: now what? Which of these is right, and could I even explain why?</p>
+
+      <p>That small hesitation is the whole story of design right now. Figma's latest survey of designers puts generative AI inside 72% of workflows, climbing steeply in a single year, and most designers say it raises the quality of their output, not merely the speed. Prompt-to-UI, AI agents living inside the canvas, entire sites conjured from a paragraph — the cost of producing an interface has fallen, fast, toward nothing.</p>
+
+      <p>We spent decades treating the act of making as the hard part. The designer's oldest fear was the empty artboard, the cursor blinking on white, the terror of the first mark. AI dissolved that fear almost overnight. But it did not make design easier. It moved the difficulty somewhere else, somewhere we've trained for far less. The bottleneck is no longer producing the thing. It's knowing which thing to keep.</p>
+
+      <p class="section-head">Taste stops being seasoning</p>
+
+      <p>When you can summon twenty variations for free, the scarce act is the judgment that chooses one and can articulate the reason. Why this spacing carries calm and that one reads as cramped. Why this flow respects a person's attention and that one quietly leaks it. Why the obvious-looking option is subtly wrong for the human it's meant for. Taste used to be the invisible seasoning sprinkled on top of craft — the thing you couldn't quite teach. Generation just promoted it to the main course.</p>
+
+      <div class="pull-quote"><p>The old anxiety was the blank canvas. The new one is the full canvas.</p></div>
+
+      <p>Six plausible screens is not a relief. It's a decision. And a decision made without a point of view collapses into a coin flip wearing the costume of a choice. The designers pulling ahead in this moment aren't the fastest prompters; prompting is becoming as unremarkable as knowing the keyboard shortcuts. They're the ones who arrive with a conviction sharp enough to reject good-looking work that doesn't hold up — who can stand in front of a wall of competent options and say, with reasons, no, not that one.</p>
+
+      <p>This quietly rewrites what a junior designer should be learning. For years we taught production: the pixels, the components, the tool fluency. If a model now produces the pixels on command, the apprenticeship has to move upstream into critique. Learning to <em>see</em> becomes more valuable than learning to make. The real risk of this era isn't that AI replaces designers — it's a generation fluent in summoning a hundred options and helpless to defend a single one.</p>
+
+      <p>It also changes where the work actually lives. If generation is the middle of the process, and the middle just evaporated, the craft retreats to the two edges: the brief before and the critique after. A sharp brief is what keeps a model from handing you six confident answers to a question you never meant to ask — it encodes the constraints, the user, the one thing that must be true. A sharp critique is what decides which answer survives contact with reality. The designers getting the most out of these tools aren't generating more; they're briefing tighter and editing harder, treating the wall of options as raw material rather than as finished work.</p>
+
+      <p>There's a subtler trap baked into how these tools present themselves. They hand you options, plural, arranged in a tidy grid, all the same size, all equally lit. And a grid of equals quietly whispers that the options are interchangeable. They never are. The tool that actually helps you choose — that surfaces the consequence of each variation instead of just its surface — is the one doing the real design work. Most generators don't do this yet. They lay out the buffet and call it a meal.</p>
+
+      <p>So the skill worth protecting, and worth hiring for, is not the ability to make screens appear. That's table stakes now, available to anyone with a sentence and ten seconds. It's the ability to look at a row of confident, polished, almost-right options and know — and say out loud — which one is actually true to the person it's for.</p>
+
+      <p class="closing-line">When anyone can make the thing, the designer's job is to know which thing deserves to exist.</p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-cta">
+      <h2 class="footer-heading">Enjoyed this essay?</h2>
+      <p class="footer-sub">Get new writing on AI, UX, and what happens at their edge.<br>No noise. Unsubscribe any time.</p>
+      <form class="footer-form" onsubmit="return false;">
+        <input class="footer-email" type="email" placeholder="your@email.com" autocomplete="email">
+        <button class="footer-btn" type="submit">Subscribe →</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Anjali Srivastava</span>
+      <div class="footer-links">
+        <a href="../index.html">← All writing</a>
+        <a href="https://www.linkedin.com/in/anjaliuiux/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
