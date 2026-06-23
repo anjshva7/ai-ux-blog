@@ -129,8 +129,12 @@
     <div class="footer-cta">
       <h2 class="footer-heading">Enjoyed this essay?</h2>
       <p class="footer-sub">Get new writing on AI, UX, and what happens at their edge.<br>No noise. Unsubscribe any time.</p>
-      <form class="footer-form" onsubmit="return false;">
-        <input class="footer-email" type="email" placeholder="your@email.com" autocomplete="email">
+      <form class="footer-form" action="https://formsubmit.co/workawayy@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New subscriber — ai-ux-blog">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input class="footer-email" type="email" name="email" placeholder="your@email.com" autocomplete="email" required>
         <button class="footer-btn" type="submit">Subscribe →</button>
       </form>
     </div>
